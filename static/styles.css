@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: 'Moga';
+    src: url('/static/fonts/Moga.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.column-thing {
+    font-family: 'PT Sans';
+}
+
+.last-updated {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #1385F0;
+    font-family: 'PT Sans';
+}
+
+body {
+    font-family: 'PT Serif', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #F24B4B url('/static/images/castle.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+h1 {
+    text-align: center;
+    color: #FEE1C0;
+    font-family: 'Moga', sans-serif;
+    font-size: 70px;
+}
+.status-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 3px 3px #FFBB31;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #FEE1C0
+}
+.status-table th, .status-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #FFBB31;
+}
+.status-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    color: #666;
+    background-color: #FEE1C0
+}
+.status-table tr:last-child td {
+    border-bottom: none;
+}
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.status-up {
+    background-color: #d4edda;
+    color: #155724;
+}
+.status-down {
+    background-color: #f8d7da;
+    color: #721c24;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Status</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>System Status</h1>
+    
+    <table class="status-table">
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>URL</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for service in services %}
+            <tr>
+                <td style="column-thing">{{ service.name }}</td>
+                <td><a href="{{ service.url }}" target="_blank" style="color: #007bff; text-decoration: none;">{{ service.url }}</a></td>
+                <td>
+                    {% if service.status %}
+                        <span class="status-badge status-up">🟢 Up</span>
+                    {% else %}
+                        <span class="status-badge status-down">🔴 Down</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="last-updated">
+        Last checked: {{ current_time }}
+    </div>
+</body>
+</html>
